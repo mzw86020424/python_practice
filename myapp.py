@@ -1,24 +1,14 @@
-# class User:
-#     pass
-
-# tom = User()
-# tom.name = "tom"
-# tom.score = 20
-
-# bob = User()
-# bob.name = "bob"
-# bob.level = 5
-
-# print(tom.name)
-# print(bob.level)
-
 class User:
+    count = 0
+
     def __init__(self, name):
+        User.count += 1
         self.name = name
 
 
+print(User.count)
 tom = User("tom")
 bob = User("bob")
+print(User.count)
 
-print(tom.name)
-print(bob.name)
+print(tom.count)
