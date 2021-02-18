@@ -1,10 +1,10 @@
-# from user import User, AdminUser
-# from mypackage.user import User, AdminUser
-import mypackage.user
+scores = [40, 50]
+print(scores[0])
+scores[0] = 45
+print(len(scores))
+scores.append(100)
+for score in scores:
+    print(score)
 
-
-bob = mypackage.user.AdminUser("bob", 23)
-
-print(bob.name)
-bob.say_hello()
-bob.say_hi()
+for i, score in enumerate(scores):
+    print('{0} : {1}'.format(i, score))
