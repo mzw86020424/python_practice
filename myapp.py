@@ -1,23 +1,11 @@
-# イテレータ
+# map(関数, イテレータ)
 
-scores = [40, 50, 70, 90, 60]
-it = iter(scores)
-print(next(it))
-print(next(it))
-print("hello")
-print(next(it))
-
-for score in scores:
-    print(score)
+# def triple(n):
+#     return n * 3
 
 
-def get_infinite():  # ジェネレータ
-    i = 0
-    while True:
-        yield i * 2
-        i += 1
+# print(list(map(triple, [1, 2, 3])))
 
+# lambda 引数: 処理
 
-g = get_infinite()
-print(next(g))
-print(next(g))
+print(list(map(lambda n: n*3, [1, 2, 3])))
