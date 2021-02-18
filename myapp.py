@@ -5,10 +5,19 @@ class User:
         User.count += 1
         self.name = name
 
+    def say_hi(self):
+        print("hi {0}".format(self.name))
+
+    @classmethod
+    def show_info(cls):
+        print("{0} instance".format(cls.count))
+
 
 print(User.count)
 tom = User("tom")
 bob = User("bob")
-print(User.count)
 
-print(tom.count)
+tom.say_hi()
+bob.say_hi()
+
+User.show_info()
